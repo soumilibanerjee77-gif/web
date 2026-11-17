@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Soumili Banerjee | BBA Student at IIM Bangalore</title>
+<meta name="description" content="Soumili Banerjee: first-year BBA (Digital Business and Entrepreneurship) student at IIM Bangalore, also studying Economics (Honours) at IGNOU.">
+<meta name="theme-color" content="#efe6d4">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%232b4560'/%3E%3Ctext x='50' y='68' font-size='58' text-anchor='middle' fill='%23efe6d4' font-family='Georgia,serif'%3ES%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#efe6d4;
+  --bg-soft:#e7dcc6;
+  --ink:#2a2622;
+  --muted:#5e564b;
+  --line:#cfc1a5;
+  --accent:#2b4560;
+  --accent-ink:#f6f0e4;
+  --serif:"Fraunces",Georgia,"Times New Roman",serif;
+  --sans:"Source Sans 3",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:4.5rem;-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:var(--sans);font-size:1.0625rem;line-height:1.65;
+}
+a{color:var(--accent);text-underline-offset:3px}
+a:hover{color:#1a2d42}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.skip{position:absolute;left:-999px;top:0;background:var(--accent);color:var(--accent-ink);padding:.6rem 1rem;z-index:20}
+.skip:focus{left:1rem;top:1rem}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:10;background:rgba(239,230,212,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.nav-inner{max-width:60rem;margin:0 auto;padding:.7rem 1.5rem;display:flex;gap:1.4rem;align-items:center;overflow-x:auto;white-space:nowrap;scrollbar-width:none}
+.nav-inner::-webkit-scrollbar{display:none}
+.nav .home{font-family:var(--serif);font-weight:600;color:var(--ink);text-decoration:none;margin-right:auto;padding-right:1rem}
+.nav a.link{color:var(--muted);text-decoration:none;font-size:.97rem;padding:.2rem 0;border-bottom:2px solid transparent}
+.nav a.link:hover,.nav a.link.on{color:var(--ink);border-bottom-color:var(--accent)}
+
+main{max-width:60rem;margin:0 auto;padding:0 1.5rem}
+
+/* hero */
+.hero{padding:5.5rem 0 4rem}
+.hero h1{
+  font-family:var(--serif);font-weight:400;font-size:clamp(3rem,10vw,6.4rem);
+  line-height:.98;letter-spacing:-.02em;margin:0 0 1.6rem;
+}
+.hero h1 span{display:block}
+.hero .role{font-size:clamp(1.15rem,2.6vw,1.45rem);max-width:34rem;margin:0 0 .4rem;color:var(--ink)}
+.hero .where{color:var(--muted);margin:0 0 2rem}
+.btns{display:flex;flex-wrap:wrap;gap:.75rem}
+.btn{
+  display:inline-flex;align-items:center;gap:.5rem;font:inherit;font-weight:600;font-size:1rem;
+  padding:.7rem 1.2rem;border-radius:999px;text-decoration:none;cursor:pointer;
+  border:1.5px solid var(--accent);background:var(--accent);color:var(--accent-ink);
+}
+.btn:hover{background:#1a2d42;color:var(--accent-ink)}
+.btn.ghost{background:transparent;color:var(--accent)}
+.btn.ghost:hover{background:var(--accent);color:var(--accent-ink)}
+
+/* sections */
+section{border-top:1px solid var(--line);padding:3rem 0;display:grid;grid-template-columns:11rem 1fr;gap:1rem 2.5rem}
+section>h2{font-family:var(--serif);font-weight:600;font-size:1.45rem;line-height:1.25;margin:0}
+section>.body{min-width:0}
+p{margin:0 0 1rem}
+.lead{font-family:var(--serif);font-size:1.28rem;line-height:1.6;max-width:38rem}
+
+/* timeline (education is a real sequence, so a line is meaningful) */
+.tl{list-style:none;margin:0;padding:0 0 0 1.6rem;border-left:2px solid var(--line)}
+.tl li{position:relative;padding-bottom:1.9rem}
+.tl li:last-child{padding-bottom:0}
+.tl li::before{content:"";position:absolute;left:calc(-1.6rem - 7px);top:.55rem;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--accent)}
+.tl li.now::before{background:var(--accent)}
+.tl h3{font-family:var(--serif);font-weight:600;font-size:1.15rem;line-height:1.35;margin:0 0 .15rem}
+.tl .deg{margin:0;color:var(--ink)}
+.tl .meta{margin:.15rem 0 0;color:var(--muted);font-size:.97rem}
+
+/* experience */
+.job h3{font-family:var(--serif);font-weight:600;font-size:1.3rem;margin:0}
+.job .org{margin:0;font-weight:600}
+.job .when{margin:.1rem 0 1rem;color:var(--muted)}
+.job ul{margin:0;padding-left:1.2rem}
+.job li{margin-bottom:.7rem;padding-left:.2rem}
+.job li::marker{color:var(--accent)}
+
+/* skills */
+.group{margin-bottom:1.6rem}
+.group:last-child{margin-bottom:0}
+.group h3{font-size:1rem;font-weight:600;margin:0 0 .6rem;color:var(--muted)}
+.chips{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.5rem}
+.chips li{background:var(--bg-soft);border:1px solid var(--line);border-radius:999px;padding:.25rem .85rem;font-size:.98rem}
+
+/* contact */
+.contact-list{list-style:none;margin:0 0 1.5rem;padding:0}
+.contact-list li{display:grid;grid-template-columns:6rem 1fr;gap:.5rem;padding:.65rem 0;border-bottom:1px solid var(--line)}
+.contact-list li:first-child{border-top:1px solid var(--line)}
+.contact-list .k{color:var(--muted)}
+.contact-list a{word-break:break-word}
+.toast{display:inline-block;margin-left:.5rem;color:var(--muted);font-size:.95rem;min-height:1.2em}
+
+footer{max-width:60rem;margin:0 auto;padding:2rem 1.5rem 3rem;border-top:1px solid var(--line);color:var(--muted);font-size:.95rem}
+
+@media (max-width:720px){
+  section{grid-template-columns:1fr;gap:1.1rem;padding:2.4rem 0}
+  .hero{padding:3.5rem 0 3rem}
+  .contact-list li{grid-template-columns:1fr;gap:0}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media print{
+  .nav,.btns,.skip,#copy-btn,.toast{display:none}
+  body{background:#fff}
+  section{break-inside:avoid}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav">
+  <nav class="nav-inner" aria-label="Main">
+    <a class="home" href="#top">Soumili Banerjee</a>
+    <a class="link" href="#about">About</a>
+    <a class="link" href="#education">Education</a>
+    <a class="link" href="#experience">Experience</a>
+    <a class="link" href="#skills">Skills</a>
+    <a class="link" href="#interests">Interests</a>
+    <a class="link" href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main id="main">
+  <div class="hero" id="top">
+    <h1><span>Soumili</span><span>Banerjee</span></h1>
+    <p class="role">First-year BBA student in Digital Business and Entrepreneurship at IIM Bangalore, and an Economics (Honours) student at IGNOU.</p>
+    <p class="where">Chittaranjan, West Bengal, India</p>
+    <div class="btns">
+      <a class="btn" href="mailto:soumilibanerjee77@gmail.com">Email me</a>
+      <a class="btn ghost" href="tel:+918016385052">Call +91 80163 85052</a>
+    </div>
+  </div>
+
+  <section id="about" aria-labelledby="h-about">
+    <h2 id="h-about">About</h2>
+    <div class="body">
+      <p class="lead">I'm a first-year dual degree student, doing a BBA in Digital Business and Entrepreneurship at IIM Bangalore alongside Economics (Honours) at the Indira Gandhi National Open University.</p>
+      <p>I've worked with candidates, clients and teams, and I'm comfortable with outreach, communication and networking. I want to connect students with real-world opportunities, industry professionals and exclusive experiences through well-organised initiatives.</p>
+    </div>
+  </section>
+
+  <section id="education" aria-labelledby="h-edu">
+    <h2 id="h-edu">Education</h2>
+    <div class="body">
+      <ol class="tl">
+        <li class="now">
+          <h3>Indian Institute of Management Bangalore (IIM Bangalore)</h3>
+          <p class="deg">Bachelor of Business Administration (BBA) in Digital Business and Entrepreneurship</p>
+          <p class="meta">2026 – 2029</p>
+        </li>
+        <li class="now">
+          <h3>Indira Gandhi National Open University (IGNOU)</h3>
+          <p class="deg">Bachelor of Arts (B.A.) in Economics (Honours)</p>
+          <p class="meta">2026 – 2029</p>
+        </li>
+        <li>
+          <h3>Deshbandhu Vidyalaya Girls', Chittaranjan (CBSE)</h3>
+          <p class="deg">Higher Secondary Education (Class XII)</p>
+          <p class="meta">2024 – 2025 &nbsp;|&nbsp; 77%</p>
+        </li>
+        <li>
+          <h3>DAV Public School (CBSE)</h3>
+          <p class="deg">Secondary Education (Class X)</p>
+          <p class="meta">2022 – 2023 &nbsp;|&nbsp; 81%</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="experience" aria-labelledby="h-exp">
+    <h2 id="h-exp">Experience</h2>
+    <div class="body">
+      <article class="job">
+        <h3>Interview Coordinator</h3>
+        <p class="org">OUY Consultancy Services</p>
+        <p class="when">April 2026 – July 2026</p>
+        <ul>
+          <li>Coordinated interview schedules by liaising with candidates, interviewers and the internal team to keep interviews smooth and on time.</li>
+          <li>Communicated professionally with candidates and clients through calls and messages, sharing details and following up on responses.</li>
+          <li>Used MS Excel to track schedules and candidate records and to prepare documents.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section id="skills" aria-labelledby="h-skills">
+    <h2 id="h-skills">Skills</h2>
+    <div class="body">
+      <div class="group">
+        <h3>Core skills</h3>
+        <ul class="chips">
+          <li>Networking</li><li>Communication</li><li>Time management</li><li>Relationship building</li>
+          <li>Coordination</li><li>Scheduling</li><li>Follow-up</li><li>Teamwork</li>
+          <li>Attention to detail</li><li>Adaptability</li>
+        </ul>
+      </div>
+      <div class="group">
+        <h3>Tools</h3>
+        <ul class="chips"><li>Microsoft Excel</li><li>Microsoft Word</li><li>Canva</li></ul>
+      </div>
+      <div class="group">
+        <h3>Languages</h3>
+        <ul class="chips"><li>English</li><li>Hindi</li><li>Bengali</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="interests" aria-labelledby="h-int">
+    <h2 id="h-int">Areas of interest</h2>
+    <div class="body">
+      <ul class="chips">
+        <li>Digital business</li><li>Entrepreneurship</li><li>Student opportunities</li>
+        <li>Industry networks</li><li>Corporate engagement</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact" aria-labelledby="h-contact">
+    <h2 id="h-contact">Contact</h2>
+    <div class="body">
+      <p>If you'd like to talk about student opportunities, events or anything else, write to me or call.</p>
+      <ul class="contact-list">
+        <li><span class="k">Email</span><span><a href="mailto:soumilibanerjee77@gmail.com">soumilibanerjee77@gmail.com</a></span></li>
+        <li><span class="k">Phone</span><span><a href="tel:+918016385052">+91 80163 85052</a></span></li>
+        <li><span class="k">Location</span><span>Chittaranjan, West Bengal, PIN 713335</span></li>
+      </ul>
+      <button class="btn ghost" id="copy-btn" type="button">Copy email address</button>
+      <span class="toast" id="toast" role="status" aria-live="polite"></span>
+    </div>
+  </section>
+</main>
+
+<footer>&copy; <span id="yr">2026</span> Soumili Banerjee</footer>
+
+<script>
+(function(){
+  var email = "soumilibanerjee77@gmail.com";
+  var btn = document.getElementById("copy-btn");
+  var toast = document.getElementById("toast");
+  var timer;
+  function say(msg){
+    toast.textContent = msg;
+    clearTimeout(timer);
+    timer = setTimeout(function(){ toast.textContent = ""; }, 2500);
+  }
+  function fallback(){
+    var t = document.createElement("textarea");
+    t.value = email; t.setAttribute("readonly",""); t.style.position = "fixed"; t.style.opacity = "0";
+    document.body.appendChild(t); t.select();
+    var ok = false;
+    try { ok = document.execCommand("copy"); } catch(e) {}
+    document.body.removeChild(t);
+    say(ok ? "Email copied" : "Couldn't copy. Please select the address above.");
+  }
+  btn.addEventListener("click", function(){
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(email).then(function(){ say("Email copied"); }, fallback);
+    } else { fallback(); }
+  });
+
+  try { document.getElementById("yr").textContent = new Date().getFullYear(); } catch(e) {}
+
+  // highlight current section in nav
+  var links = document.querySelectorAll(".nav a.link");
+  if ("IntersectionObserver" in window) {
+    var map = {};
+    links.forEach(function(a){ map[a.getAttribute("href").slice(1)] = a; });
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting) {
+          links.forEach(function(a){ a.classList.remove("on"); a.removeAttribute("aria-current"); });
+          var a = map[e.target.id];
+          if (a) { a.classList.add("on"); a.setAttribute("aria-current","true"); }
+        }
+      });
+    }, { rootMargin: "-30% 0px -60% 0px" });
+    Object.keys(map).forEach(function(id){
+      var el = document.getElementById(id);
+      if (el) io.observe(el);
+    });
+  }
+})();
+</script>
+</body>
+</html>
